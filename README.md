@@ -16,6 +16,20 @@ A manifest-driven asset pipeline for reskinning static HTML/CSS/JS city-builder 
 
 ---
 
+## Showcase
+
+| Titan Frontier | Antarctic Ice Base |
+|:---:|:---:|
+| ![Titan Frontier](showcase/01-titan-frontier.webp) | ![Antarctic](showcase/02-antarctic.webp) |
+
+| Paris Landmarks | Song Dynasty Market |
+|:---:|:---:|
+| ![Paris](showcase/03-paris.webp) | ![Song Dynasty](showcase/04-song-dynasty.webp) |
+
+All themes above were generated with the same engine pipeline: **AI sheet generation → background removal → deterministic crop → drop into the same static HTML/CSS/JS runtime.**
+
+---
+
 ## Quick start
 
 ### 1. Install
