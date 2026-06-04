@@ -1,0 +1,1909 @@
+[
+  {
+    "id": "transport-01",
+    "name": "Stone Path",
+    "category": "transport",
+    "assetKind": "road",
+    "roadType": "stone",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 80,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#7a715f",
+    "height": 0,
+    "icon": "P",
+    "effects": {
+      "trafficCapacity": 8,
+      "popularity": 0
+    },
+    "desc": "Stone path tile. Select it, then drag across build tiles to draw this path style."
+  },
+  {
+    "id": "transport-02",
+    "name": "Dirt Path",
+    "category": "transport",
+    "assetKind": "road",
+    "roadType": "dirt",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 40,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#7a715f",
+    "height": 0,
+    "icon": "P",
+    "effects": {
+      "trafficCapacity": 8,
+      "popularity": 0
+    },
+    "desc": "Soft dirt path tile that blends into natural village and farm maps."
+  },
+  {
+    "id": "transport-03",
+    "name": "Grass Trail",
+    "category": "transport",
+    "assetKind": "road",
+    "roadType": "grass",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 30,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#7a715f",
+    "height": 0,
+    "icon": "P",
+    "effects": {
+      "trafficCapacity": 8,
+      "popularity": 0
+    },
+    "desc": "Subtle walked grass trail for parks, farms, and forest scenes."
+  },
+  {
+    "id": "transport-04",
+    "name": "Wood Plank Path",
+    "category": "transport",
+    "assetKind": "road",
+    "roadType": "wood",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 70,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#7a715f",
+    "height": 0,
+    "icon": "P",
+    "effects": {
+      "trafficCapacity": 8,
+      "popularity": 0
+    },
+    "desc": "Wood plank path for gardens, wetlands, docks, and cozy town edges."
+  },
+  {
+    "id": "residential-01",
+    "name": "Home Module 01",
+    "category": "residential",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 650,
+    "maintenance": 20,
+    "income": 65,
+    "population": 18,
+    "color": "#c4875a",
+    "height": 42,
+    "icon": "H",
+    "effects": {
+      "culture": 1,
+      "traffic": 1
+    },
+    "desc": "Home Module 01 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-02",
+    "name": "Home Module 02",
+    "category": "residential",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 1450,
+    "maintenance": 45,
+    "income": 150,
+    "population": 46,
+    "color": "#b45f45",
+    "height": 62,
+    "icon": "H",
+    "effects": {
+      "culture": 5,
+      "popularity": 2,
+      "traffic": 3
+    },
+    "desc": "Home Module 02 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-03",
+    "name": "Home Module 03",
+    "category": "residential",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 2100,
+    "maintenance": 70,
+    "income": 260,
+    "population": 88,
+    "color": "#d6b46b",
+    "height": 78,
+    "icon": "H",
+    "effects": {
+      "traffic": 5
+    },
+    "desc": "Home Module 03 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-04",
+    "name": "Home Module 04",
+    "category": "residential",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 5200,
+    "maintenance": 180,
+    "income": 720,
+    "population": 160,
+    "color": "#8fb6d9",
+    "height": 116,
+    "icon": "H",
+    "effects": {
+      "popularity": 5,
+      "traffic": 9
+    },
+    "desc": "Home Module 04 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-01",
+    "name": "Shop Module 01",
+    "category": "commercial",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 700,
+    "maintenance": 25,
+    "income": 140,
+    "population": 0,
+    "color": "#f0c64b",
+    "height": 36,
+    "icon": "S",
+    "effects": {
+      "commerce": 5,
+      "popularity": 2,
+      "traffic": 2
+    },
+    "desc": "Shop Module 01 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-02",
+    "name": "Shop Module 02",
+    "category": "commercial",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 900,
+    "maintenance": 35,
+    "income": 160,
+    "population": 0,
+    "color": "#9b6a4a",
+    "height": 34,
+    "icon": "S",
+    "effects": {
+      "commerce": 4,
+      "culture": 2,
+      "popularity": 4,
+      "traffic": 2
+    },
+    "desc": "Shop Module 02 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-03",
+    "name": "Shop Module 03",
+    "category": "commercial",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 4200,
+    "maintenance": 210,
+    "income": 820,
+    "population": 0,
+    "color": "#e38ab2",
+    "height": 88,
+    "icon": "S",
+    "effects": {
+      "commerce": 20,
+      "popularity": 8,
+      "traffic": 12
+    },
+    "desc": "Shop Module 03 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-04",
+    "name": "Shop Module 04",
+    "category": "commercial",
+    "size": [
+      2,
+      3
+    ],
+    "cost": 4800,
+    "maintenance": 230,
+    "income": 950,
+    "population": 0,
+    "color": "#7fa7c9",
+    "height": 124,
+    "icon": "S",
+    "effects": {
+      "commerce": 22,
+      "traffic": 13
+    },
+    "desc": "Shop Module 04 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-05",
+    "name": "Shop Module 05",
+    "category": "commercial",
+    "size": [
+      2,
+      1
+    ],
+    "cost": 1300,
+    "maintenance": 55,
+    "income": 260,
+    "population": 0,
+    "color": "#e07a5f",
+    "height": 34,
+    "icon": "S",
+    "effects": {
+      "commerce": 8,
+      "popularity": 7,
+      "traffic": 4
+    },
+    "desc": "Shop Module 05 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-01",
+    "name": "Service Module 01",
+    "category": "service",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 1800,
+    "maintenance": 120,
+    "income": 40,
+    "population": 0,
+    "color": "#74a66a",
+    "height": 52,
+    "icon": "S",
+    "effects": {
+      "satisfaction": 8,
+      "culture": 3,
+      "traffic": 3
+    },
+    "desc": "Service Module 01 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-02",
+    "name": "Service Module 02",
+    "category": "service",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 2400,
+    "maintenance": 160,
+    "income": 60,
+    "population": 0,
+    "color": "#d96767",
+    "height": 58,
+    "icon": "S",
+    "effects": {
+      "satisfaction": 10,
+      "traffic": 4
+    },
+    "desc": "Service Module 02 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-03",
+    "name": "Service Module 03",
+    "category": "service",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 1100,
+    "maintenance": 50,
+    "income": 20,
+    "population": 0,
+    "color": "#55a85a",
+    "height": 28,
+    "icon": "S",
+    "effects": {
+      "satisfaction": 9,
+      "culture": 2,
+      "popularity": 2,
+      "traffic": -1
+    },
+    "desc": "Service Module 03 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-04",
+    "name": "Service Module 04",
+    "category": "service",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 3600,
+    "maintenance": 150,
+    "income": 230,
+    "population": 0,
+    "color": "#bfa37a",
+    "height": 58,
+    "icon": "S",
+    "effects": {
+      "culture": 16,
+      "popularity": 8,
+      "traffic": 5
+    },
+    "desc": "Service Module 04 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-01",
+    "name": "Landmark Module 01",
+    "category": "landmark",
+    "size": [
+      2,
+      3
+    ],
+    "cost": 8200,
+    "maintenance": 320,
+    "income": 1300,
+    "population": 0,
+    "color": "#d9567f",
+    "height": 150,
+    "icon": "L",
+    "effects": {
+      "popularity": 28,
+      "culture": 14,
+      "commerce": 8,
+      "traffic": 16
+    },
+    "desc": "Landmark Module 01 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-02",
+    "name": "Landmark Module 02",
+    "category": "landmark",
+    "size": [
+      2,
+      3
+    ],
+    "cost": 9800,
+    "maintenance": 420,
+    "income": 1600,
+    "population": 0,
+    "color": "#72a8d8",
+    "height": 170,
+    "icon": "L",
+    "effects": {
+      "popularity": 24,
+      "commerce": 24,
+      "traffic": 18
+    },
+    "desc": "Landmark Module 02 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-03",
+    "name": "Landmark Module 03",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 7600,
+    "maintenance": 300,
+    "income": 1180,
+    "population": 0,
+    "color": "#d2b48c",
+    "height": 88,
+    "icon": "L",
+    "effects": {
+      "popularity": 30,
+      "culture": 28,
+      "commerce": 10,
+      "traffic": 17
+    },
+    "desc": "Landmark Module 03 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-04",
+    "name": "Landmark Module 04",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 6200,
+    "maintenance": 240,
+    "income": 860,
+    "population": 0,
+    "color": "#5f8d4e",
+    "height": 64,
+    "icon": "L",
+    "effects": {
+      "popularity": 22,
+      "culture": 26,
+      "traffic": 12
+    },
+    "desc": "Landmark Module 04 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-05",
+    "name": "Landmark Module 05",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 5600,
+    "maintenance": 210,
+    "income": 720,
+    "population": 0,
+    "color": "#d8a531",
+    "height": 72,
+    "icon": "L",
+    "effects": {
+      "popularity": 16,
+      "culture": 22,
+      "traffic": 9
+    },
+    "desc": "Landmark Module 05 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-06",
+    "name": "Landmark Module 06",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 5200,
+    "maintenance": 180,
+    "income": 610,
+    "population": 0,
+    "color": "#a85d45",
+    "height": 76,
+    "icon": "L",
+    "effects": {
+      "popularity": 20,
+      "culture": 20,
+      "traffic": 8
+    },
+    "desc": "Landmark Module 06 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-07",
+    "name": "Landmark Module 07",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 6800,
+    "maintenance": 260,
+    "income": 760,
+    "population": 0,
+    "color": "#c62828",
+    "height": 92,
+    "icon": "L",
+    "effects": {
+      "popularity": 14,
+      "culture": 30,
+      "traffic": 10
+    },
+    "desc": "Landmark Module 07 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-08",
+    "name": "Landmark Module 08",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 6000,
+    "maintenance": 220,
+    "income": 650,
+    "population": 0,
+    "color": "#6d5f4f",
+    "height": 62,
+    "icon": "L",
+    "effects": {
+      "popularity": 13,
+      "culture": 28,
+      "traffic": 7
+    },
+    "desc": "Landmark Module 08 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-09",
+    "name": "Landmark Module 09",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 5000,
+    "maintenance": 180,
+    "income": 520,
+    "population": 0,
+    "color": "#8d5b4c",
+    "height": 86,
+    "icon": "L",
+    "effects": {
+      "popularity": 12,
+      "culture": 20,
+      "traffic": 6
+    },
+    "desc": "Landmark Module 09 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-10",
+    "name": "Landmark Module 10",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 7000,
+    "maintenance": 280,
+    "income": 820,
+    "population": 0,
+    "color": "#5b6b9a",
+    "height": 66,
+    "icon": "L",
+    "effects": {
+      "popularity": 18,
+      "culture": 24,
+      "traffic": 11
+    },
+    "desc": "Landmark Module 10 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-11",
+    "name": "Landmark Module 11",
+    "category": "landmark",
+    "size": [
+      2,
+      3
+    ],
+    "cost": 8500,
+    "maintenance": 360,
+    "income": 1250,
+    "population": 0,
+    "color": "#8fb8c8",
+    "height": 150,
+    "icon": "L",
+    "effects": {
+      "popularity": 20,
+      "commerce": 22,
+      "traffic": 14
+    },
+    "desc": "Landmark Module 11 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-12",
+    "name": "Landmark Module 12",
+    "category": "landmark",
+    "size": [
+      2,
+      3
+    ],
+    "cost": 9000,
+    "maintenance": 390,
+    "income": 1350,
+    "population": 0,
+    "color": "#7e9fb8",
+    "height": 165,
+    "icon": "L",
+    "effects": {
+      "popularity": 22,
+      "commerce": 24,
+      "traffic": 15
+    },
+    "desc": "Landmark Module 12 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-13",
+    "name": "Landmark Module 13",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 6500,
+    "maintenance": 230,
+    "income": 760,
+    "population": 0,
+    "color": "#6aa6a8",
+    "height": 70,
+    "icon": "L",
+    "effects": {
+      "culture": 24,
+      "popularity": 16,
+      "traffic": 9
+    },
+    "desc": "Landmark Module 13 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-05",
+    "name": "Service Module 05",
+    "category": "service",
+    "size": [
+      4,
+      3
+    ],
+    "cost": 4200,
+    "maintenance": 180,
+    "income": 240,
+    "population": 0,
+    "color": "#4fae67",
+    "height": 30,
+    "icon": "S",
+    "effects": {
+      "satisfaction": 18,
+      "culture": 8,
+      "popularity": 10,
+      "traffic": -3
+    },
+    "desc": "Service Module 05 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-06",
+    "name": "Shop Module 06",
+    "category": "commercial",
+    "size": [
+      4,
+      1
+    ],
+    "cost": 3800,
+    "maintenance": 170,
+    "income": 760,
+    "population": 0,
+    "color": "#e2a64b",
+    "height": 35,
+    "icon": "S",
+    "effects": {
+      "commerce": 18,
+      "popularity": 18,
+      "traffic": 10
+    },
+    "desc": "Shop Module 06 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-07",
+    "name": "Shop Module 07",
+    "category": "commercial",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 4600,
+    "maintenance": 210,
+    "income": 720,
+    "population": 0,
+    "color": "#b56d52",
+    "height": 58,
+    "icon": "S",
+    "effects": {
+      "commerce": 14,
+      "culture": 14,
+      "popularity": 16,
+      "traffic": 9
+    },
+    "desc": "Shop Module 07 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-14",
+    "name": "Landmark Module 14",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 4800,
+    "maintenance": 170,
+    "income": 460,
+    "population": 0,
+    "color": "#bd8e38",
+    "height": 78,
+    "icon": "L",
+    "effects": {
+      "culture": 20,
+      "popularity": 10,
+      "traffic": 5
+    },
+    "desc": "Landmark Module 14 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "campus-01",
+    "name": "Campus Module 01",
+    "category": "campus",
+    "size": [
+      4,
+      3
+    ],
+    "cost": 6200,
+    "maintenance": 260,
+    "income": 320,
+    "population": 120,
+    "color": "#6f8dc9",
+    "height": 60,
+    "icon": "C",
+    "effects": {
+      "culture": 26,
+      "popularity": 8,
+      "traffic": 8
+    },
+    "desc": "Campus Module 01 adds Campus capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "campus-02",
+    "name": "Campus Module 02",
+    "category": "campus",
+    "size": [
+      4,
+      3
+    ],
+    "cost": 6200,
+    "maintenance": 260,
+    "income": 320,
+    "population": 120,
+    "color": "#a94442",
+    "height": 60,
+    "icon": "C",
+    "effects": {
+      "culture": 26,
+      "popularity": 8,
+      "traffic": 8
+    },
+    "desc": "Campus Module 02 adds Campus capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "campus-03",
+    "name": "Campus Module 03",
+    "category": "campus",
+    "size": [
+      4,
+      3
+    ],
+    "cost": 5900,
+    "maintenance": 245,
+    "income": 300,
+    "population": 110,
+    "color": "#688fbd",
+    "height": 58,
+    "icon": "C",
+    "effects": {
+      "culture": 24,
+      "popularity": 8,
+      "traffic": 7
+    },
+    "desc": "Campus Module 03 adds Campus capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "bridge-01",
+    "name": "Bridge Module 01",
+    "category": "bridge",
+    "size": [
+      3,
+      1
+    ],
+    "cost": 2600,
+    "maintenance": 80,
+    "income": 120,
+    "population": 0,
+    "color": "#9aa0a8",
+    "height": 38,
+    "icon": "B",
+    "effects": {
+      "culture": 12,
+      "popularity": 12,
+      "traffic": -2
+    },
+    "desc": "Bridge Module 01 adds Bridge capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "bridge-02",
+    "name": "Bridge Module 02",
+    "category": "bridge",
+    "size": [
+      4,
+      1
+    ],
+    "cost": 3800,
+    "maintenance": 120,
+    "income": 180,
+    "population": 0,
+    "color": "#b7b7b7",
+    "height": 48,
+    "icon": "B",
+    "effects": {
+      "popularity": 10,
+      "traffic": -5
+    },
+    "desc": "Bridge Module 02 adds Bridge capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "bridge-03",
+    "name": "Bridge Module 03",
+    "category": "bridge",
+    "size": [
+      4,
+      1
+    ],
+    "cost": 3800,
+    "maintenance": 120,
+    "income": 180,
+    "population": 0,
+    "color": "#c0a060",
+    "height": 48,
+    "icon": "B",
+    "effects": {
+      "popularity": 10,
+      "traffic": -5
+    },
+    "desc": "Bridge Module 03 adds Bridge capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-15",
+    "name": "Landmark Module 15",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 7200,
+    "maintenance": 260,
+    "income": 980,
+    "population": 0,
+    "color": "#7da9c7",
+    "height": 84,
+    "icon": "L",
+    "effects": {
+      "popularity": 22,
+      "commerce": 16,
+      "culture": 10,
+      "traffic": 12
+    },
+    "desc": "Landmark Module 15 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-16",
+    "name": "Landmark Module 16",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 6400,
+    "maintenance": 230,
+    "income": 720,
+    "population": 0,
+    "color": "#b8a36a",
+    "height": 46,
+    "icon": "L",
+    "effects": {
+      "popularity": 18,
+      "culture": 18,
+      "commerce": 10,
+      "traffic": 9
+    },
+    "desc": "Landmark Module 16 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-17",
+    "name": "Landmark Module 17",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 6200,
+    "maintenance": 240,
+    "income": 660,
+    "population": 0,
+    "color": "#8c7aa9",
+    "height": 68,
+    "icon": "L",
+    "effects": {
+      "popularity": 15,
+      "culture": 30,
+      "traffic": 7
+    },
+    "desc": "Landmark Module 17 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-18",
+    "name": "Landmark Module 18",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 5600,
+    "maintenance": 190,
+    "income": 580,
+    "population": 0,
+    "color": "#6f9c9e",
+    "height": 60,
+    "icon": "L",
+    "effects": {
+      "popularity": 12,
+      "culture": 22,
+      "commerce": 6,
+      "traffic": 5
+    },
+    "desc": "Landmark Module 18 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-19",
+    "name": "Landmark Module 19",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 6100,
+    "maintenance": 230,
+    "income": 460,
+    "population": 0,
+    "color": "#9b8f78",
+    "height": 62,
+    "icon": "L",
+    "effects": {
+      "culture": 28,
+      "popularity": 10,
+      "traffic": 6
+    },
+    "desc": "Landmark Module 19 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-20",
+    "name": "Landmark Module 20",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 5900,
+    "maintenance": 210,
+    "income": 620,
+    "population": 0,
+    "color": "#5f8fb5",
+    "height": 58,
+    "icon": "L",
+    "effects": {
+      "culture": 24,
+      "popularity": 14,
+      "traffic": 7
+    },
+    "desc": "Landmark Module 20 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-21",
+    "name": "Landmark Module 21",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 5800,
+    "maintenance": 220,
+    "income": 560,
+    "population": 0,
+    "color": "#8a8a84",
+    "height": 56,
+    "icon": "L",
+    "effects": {
+      "culture": 26,
+      "popularity": 12,
+      "traffic": 6
+    },
+    "desc": "Landmark Module 21 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-08",
+    "name": "Shop Module 08",
+    "category": "commercial",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 5200,
+    "maintenance": 230,
+    "income": 880,
+    "population": 0,
+    "color": "#d08a5b",
+    "height": 68,
+    "icon": "S",
+    "effects": {
+      "commerce": 18,
+      "culture": 10,
+      "popularity": 14,
+      "traffic": 10
+    },
+    "desc": "Shop Module 08 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-09",
+    "name": "Shop Module 09",
+    "category": "commercial",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 6200,
+    "maintenance": 270,
+    "income": 1100,
+    "population": 0,
+    "color": "#d6a05f",
+    "height": 70,
+    "icon": "S",
+    "effects": {
+      "commerce": 24,
+      "popularity": 16,
+      "traffic": 13
+    },
+    "desc": "Shop Module 09 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-10",
+    "name": "Shop Module 10",
+    "category": "commercial",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 5600,
+    "maintenance": 250,
+    "income": 980,
+    "population": 0,
+    "color": "#c77db1",
+    "height": 76,
+    "icon": "S",
+    "effects": {
+      "commerce": 22,
+      "popularity": 12,
+      "traffic": 12
+    },
+    "desc": "Shop Module 10 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-11",
+    "name": "Shop Module 11",
+    "category": "commercial",
+    "size": [
+      2,
+      1
+    ],
+    "cost": 1200,
+    "maintenance": 50,
+    "income": 240,
+    "population": 0,
+    "color": "#6bad74",
+    "height": 34,
+    "icon": "S",
+    "effects": {
+      "commerce": 7,
+      "popularity": 4,
+      "traffic": 3
+    },
+    "desc": "Shop Module 11 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-12",
+    "name": "Shop Module 12",
+    "category": "commercial",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 5200,
+    "maintenance": 220,
+    "income": 900,
+    "population": 0,
+    "color": "#6c9ec1",
+    "height": 82,
+    "icon": "S",
+    "effects": {
+      "commerce": 20,
+      "culture": 6,
+      "traffic": 9
+    },
+    "desc": "Shop Module 12 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-06",
+    "name": "Service Module 06",
+    "category": "service",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 2200,
+    "maintenance": 110,
+    "income": 120,
+    "population": 0,
+    "color": "#e0b75e",
+    "height": 46,
+    "icon": "S",
+    "effects": {
+      "satisfaction": 12,
+      "commerce": 4,
+      "popularity": 4,
+      "traffic": 3
+    },
+    "desc": "Service Module 06 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-07",
+    "name": "Service Module 07",
+    "category": "service",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 3200,
+    "maintenance": 150,
+    "income": 180,
+    "population": 0,
+    "color": "#5aa2a5",
+    "height": 48,
+    "icon": "S",
+    "effects": {
+      "satisfaction": 12,
+      "popularity": 7,
+      "traffic": 4
+    },
+    "desc": "Service Module 07 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-08",
+    "name": "Service Module 08",
+    "category": "service",
+    "size": [
+      4,
+      1
+    ],
+    "cost": 1600,
+    "maintenance": 60,
+    "income": 80,
+    "population": 0,
+    "color": "#77b985",
+    "height": 24,
+    "icon": "S",
+    "effects": {
+      "satisfaction": 10,
+      "popularity": 8,
+      "traffic": -2
+    },
+    "desc": "Service Module 08 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "service-09",
+    "name": "Service Module 09",
+    "category": "service",
+    "size": [
+      3,
+      3
+    ],
+    "cost": 3000,
+    "maintenance": 130,
+    "income": 90,
+    "population": 0,
+    "color": "#4f9e72",
+    "height": 26,
+    "icon": "S",
+    "effects": {
+      "satisfaction": 16,
+      "culture": 5,
+      "popularity": 6,
+      "traffic": -4
+    },
+    "desc": "Service Module 09 adds Service capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-05",
+    "name": "Home Module 05",
+    "category": "residential",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 2600,
+    "maintenance": 85,
+    "income": 320,
+    "population": 96,
+    "color": "#8db7d8",
+    "height": 86,
+    "icon": "H",
+    "effects": {
+      "commerce": 2,
+      "traffic": 5
+    },
+    "desc": "Home Module 05 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-06",
+    "name": "Home Module 06",
+    "category": "residential",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 1800,
+    "maintenance": 60,
+    "income": 190,
+    "population": 58,
+    "color": "#bb7b57",
+    "height": 54,
+    "icon": "H",
+    "effects": {
+      "culture": 6,
+      "popularity": 3,
+      "traffic": 3
+    },
+    "desc": "Home Module 06 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-07",
+    "name": "Home Module 07",
+    "category": "residential",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 3400,
+    "maintenance": 95,
+    "income": 330,
+    "population": 42,
+    "color": "#c99c72",
+    "height": 50,
+    "icon": "H",
+    "effects": {
+      "culture": 7,
+      "popularity": 5,
+      "traffic": 2
+    },
+    "desc": "Home Module 07 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-08",
+    "name": "Home Module 08",
+    "category": "residential",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 3100,
+    "maintenance": 100,
+    "income": 360,
+    "population": 90,
+    "color": "#b86a52",
+    "height": 58,
+    "icon": "H",
+    "effects": {
+      "culture": 8,
+      "satisfaction": 5,
+      "traffic": 5
+    },
+    "desc": "Home Module 08 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "campus-04",
+    "name": "Campus Module 04",
+    "category": "campus",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 5600,
+    "maintenance": 230,
+    "income": 260,
+    "population": 95,
+    "color": "#715ca8",
+    "height": 70,
+    "icon": "C",
+    "effects": {
+      "culture": 22,
+      "popularity": 9,
+      "traffic": 7
+    },
+    "desc": "Campus Module 04 adds Campus capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "campus-05",
+    "name": "Campus Module 05",
+    "category": "campus",
+    "size": [
+      4,
+      3
+    ],
+    "cost": 5600,
+    "maintenance": 235,
+    "income": 290,
+    "population": 110,
+    "color": "#577aa6",
+    "height": 58,
+    "icon": "C",
+    "effects": {
+      "culture": 23,
+      "popularity": 7,
+      "traffic": 7
+    },
+    "desc": "Campus Module 05 adds Campus capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "bridge-04",
+    "name": "Bridge Module 04",
+    "category": "bridge",
+    "size": [
+      3,
+      1
+    ],
+    "cost": 2400,
+    "maintenance": 75,
+    "income": 120,
+    "population": 0,
+    "color": "#91a7b5",
+    "height": 34,
+    "icon": "B",
+    "effects": {
+      "popularity": 8,
+      "traffic": -4
+    },
+    "desc": "Bridge Module 04 adds Bridge capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "bridge-05",
+    "name": "Bridge Module 05",
+    "category": "bridge",
+    "size": [
+      4,
+      1
+    ],
+    "cost": 3900,
+    "maintenance": 125,
+    "income": 170,
+    "population": 0,
+    "color": "#b8b2a2",
+    "height": 48,
+    "icon": "B",
+    "effects": {
+      "popularity": 8,
+      "traffic": -6
+    },
+    "desc": "Bridge Module 05 adds Bridge capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "bridge-06",
+    "name": "Bridge Module 06",
+    "category": "bridge",
+    "size": [
+      4,
+      1
+    ],
+    "cost": 4100,
+    "maintenance": 135,
+    "income": 190,
+    "population": 0,
+    "color": "#c4a96d",
+    "height": 52,
+    "icon": "B",
+    "effects": {
+      "popularity": 11,
+      "culture": 4,
+      "traffic": -6
+    },
+    "desc": "Bridge Module 06 adds Bridge capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "bridge-07",
+    "name": "Bridge Module 07",
+    "category": "bridge",
+    "size": [
+      4,
+      1
+    ],
+    "cost": 3700,
+    "maintenance": 115,
+    "income": 160,
+    "population": 0,
+    "color": "#9db2bf",
+    "height": 46,
+    "icon": "B",
+    "effects": {
+      "traffic": -7,
+      "popularity": 6
+    },
+    "desc": "Bridge Module 07 adds Bridge capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-22",
+    "name": "Landmark Module 22",
+    "category": "landmark",
+    "size": [
+      2,
+      3
+    ],
+    "cost": 8200,
+    "maintenance": 340,
+    "income": 1180,
+    "population": 0,
+    "color": "#9fb6c9",
+    "height": 142,
+    "icon": "L",
+    "effects": {
+      "commerce": 22,
+      "popularity": 18,
+      "traffic": 13
+    },
+    "desc": "Landmark Module 22 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-23",
+    "name": "Landmark Module 23",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 4800,
+    "maintenance": 160,
+    "income": 430,
+    "population": 0,
+    "color": "#b8976b",
+    "height": 70,
+    "icon": "L",
+    "effects": {
+      "culture": 18,
+      "popularity": 10,
+      "traffic": 5
+    },
+    "desc": "Landmark Module 23 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-24",
+    "name": "Landmark Module 24",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 5200,
+    "maintenance": 180,
+    "income": 520,
+    "population": 0,
+    "color": "#b55d83",
+    "height": 74,
+    "icon": "L",
+    "effects": {
+      "culture": 22,
+      "popularity": 16,
+      "commerce": 6,
+      "traffic": 6
+    },
+    "desc": "Landmark Module 24 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-25",
+    "name": "Landmark Module 25",
+    "category": "landmark",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 5400,
+    "maintenance": 190,
+    "income": 500,
+    "population": 0,
+    "color": "#d0b078",
+    "height": 66,
+    "icon": "L",
+    "effects": {
+      "culture": 24,
+      "popularity": 12,
+      "traffic": 5
+    },
+    "desc": "Landmark Module 25 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "landmark-26",
+    "name": "Landmark Module 26",
+    "category": "landmark",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 6200,
+    "maintenance": 220,
+    "income": 620,
+    "population": 0,
+    "color": "#8c8f88",
+    "height": 82,
+    "icon": "L",
+    "effects": {
+      "culture": 28,
+      "popularity": 14,
+      "traffic": 7
+    },
+    "desc": "Landmark Module 26 adds Landmark capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-13",
+    "name": "Shop Module 13",
+    "category": "commercial",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 6200,
+    "maintenance": 260,
+    "income": 1050,
+    "population": 0,
+    "color": "#8aa5b8",
+    "height": 92,
+    "icon": "S",
+    "effects": {
+      "commerce": 24,
+      "popularity": 10,
+      "traffic": 12
+    },
+    "desc": "Shop Module 13 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-14",
+    "name": "Shop Module 14",
+    "category": "commercial",
+    "size": [
+      2,
+      3
+    ],
+    "cost": 5600,
+    "maintenance": 240,
+    "income": 920,
+    "population": 0,
+    "color": "#b98964",
+    "height": 105,
+    "icon": "S",
+    "effects": {
+      "commerce": 16,
+      "popularity": 13,
+      "traffic": 9
+    },
+    "desc": "Shop Module 14 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-15",
+    "name": "Shop Module 15",
+    "category": "commercial",
+    "size": [
+      2,
+      1
+    ],
+    "cost": 1800,
+    "maintenance": 70,
+    "income": 300,
+    "population": 0,
+    "color": "#8f7ac0",
+    "height": 42,
+    "icon": "S",
+    "effects": {
+      "commerce": 7,
+      "culture": 7,
+      "popularity": 3,
+      "traffic": 3
+    },
+    "desc": "Shop Module 15 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "commercial-16",
+    "name": "Shop Module 16",
+    "category": "commercial",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 1100,
+    "maintenance": 40,
+    "income": 180,
+    "population": 0,
+    "color": "#a87955",
+    "height": 34,
+    "icon": "S",
+    "effects": {
+      "commerce": 5,
+      "culture": 5,
+      "popularity": 4,
+      "traffic": 2
+    },
+    "desc": "Shop Module 16 adds Shop capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-09",
+    "name": "Home Module 09",
+    "category": "residential",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 3000,
+    "maintenance": 90,
+    "income": 360,
+    "population": 72,
+    "color": "#9a826f",
+    "height": 62,
+    "icon": "H",
+    "effects": {
+      "culture": 4,
+      "popularity": 4,
+      "traffic": 4
+    },
+    "desc": "Home Module 09 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-10",
+    "name": "Home Module 10",
+    "category": "residential",
+    "size": [
+      3,
+      2
+    ],
+    "cost": 4800,
+    "maintenance": 150,
+    "income": 620,
+    "population": 180,
+    "color": "#8ea9c2",
+    "height": 120,
+    "icon": "H",
+    "effects": {
+      "traffic": 10
+    },
+    "desc": "Home Module 10 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-11",
+    "name": "Home Module 11",
+    "category": "residential",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 1900,
+    "maintenance": 55,
+    "income": 210,
+    "population": 82,
+    "color": "#c08d68",
+    "height": 56,
+    "icon": "H",
+    "effects": {
+      "culture": 3,
+      "traffic": 3
+    },
+    "desc": "Home Module 11 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "residential-12",
+    "name": "Home Module 12",
+    "category": "residential",
+    "size": [
+      2,
+      2
+    ],
+    "cost": 2400,
+    "maintenance": 80,
+    "income": 300,
+    "population": 110,
+    "color": "#7fa7cf",
+    "height": 78,
+    "icon": "H",
+    "effects": {
+      "commerce": 3,
+      "traffic": 5
+    },
+    "desc": "Home Module 12 adds Home capacity and interacts with nearby roads and same-zone buildings."
+  },
+  {
+    "id": "common-ground-grass",
+    "name": "Grass Patch",
+    "category": "common",
+    "assetKind": "ground",
+    "commonAsset": "grass",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 20,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#8aac5d",
+    "height": 0,
+    "icon": "G",
+    "effects": {},
+    "desc": "Reusable grass terrain patch for scene dressing."
+  },
+  {
+    "id": "common-ground-dirt",
+    "name": "Dirt Patch",
+    "category": "common",
+    "assetKind": "ground",
+    "commonAsset": "dirt",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 20,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#9b7350",
+    "height": 0,
+    "icon": "D",
+    "effects": {},
+    "desc": "Reusable dirt terrain patch for scene dressing."
+  },
+  {
+    "id": "common-ground-sand",
+    "name": "Sand Patch",
+    "category": "common",
+    "assetKind": "ground",
+    "commonAsset": "sand",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 20,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#e9d7b5",
+    "height": 0,
+    "icon": "S",
+    "effects": {},
+    "desc": "Reusable sand terrain patch for scene dressing."
+  },
+  {
+    "id": "common-ground-gravel",
+    "name": "Gravel Patch",
+    "category": "common",
+    "assetKind": "ground",
+    "commonAsset": "gravel",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 25,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#9a9a95",
+    "height": 0,
+    "icon": "V",
+    "effects": {},
+    "desc": "Reusable gravel and stone terrain patch for scene dressing."
+  },
+  {
+    "id": "common-prop-tree",
+    "name": "Tree",
+    "category": "common",
+    "assetKind": "prop",
+    "commonAsset": "tree",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 60,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#4f9b4d",
+    "height": 42,
+    "icon": "T",
+    "effects": {
+      "popularity": 1
+    },
+    "desc": "Reusable tree scenery prop with transparent background."
+  },
+  {
+    "id": "common-prop-rock",
+    "name": "Rock",
+    "category": "common",
+    "assetKind": "prop",
+    "commonAsset": "rock",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 45,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#8f8f8b",
+    "height": 24,
+    "icon": "R",
+    "effects": {},
+    "desc": "Reusable rock scenery prop with transparent background."
+  },
+  {
+    "id": "common-prop-bush",
+    "name": "Bush",
+    "category": "common",
+    "assetKind": "prop",
+    "commonAsset": "bush",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 40,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#5fa955",
+    "height": 24,
+    "icon": "B",
+    "effects": {
+      "popularity": 1
+    },
+    "desc": "Reusable bush scenery prop with transparent background."
+  },
+  {
+    "id": "common-prop-flowers",
+    "name": "Flower Patch",
+    "category": "common",
+    "assetKind": "prop",
+    "commonAsset": "flowers",
+    "size": [
+      1,
+      1
+    ],
+    "cost": 50,
+    "maintenance": 0,
+    "income": 0,
+    "population": 0,
+    "color": "#d7c85e",
+    "height": 18,
+    "icon": "F",
+    "effects": {
+      "popularity": 1
+    },
+    "desc": "Reusable flower scenery prop with transparent background."
+  }
+]

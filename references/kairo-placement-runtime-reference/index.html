@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Block City Builder</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="top-hud">
+      <div class="brand-block">
+        <div class="brand-mark" id="brandMark">$</div>
+        <div>
+          <p class="sys-label" id="projectSubtitle">Modular City Management</p>
+          <h1 id="projectTitle">Block City Builder</h1>
+        </div>
+      </div>
+      <div class="cycle-card"><span id="cycleLabel">M 1</span><b id="modeLabel">BUILD</b></div>
+    </header>
+
+    <section class="scene-stage" id="stage">
+      <div class="map-wrap" id="mapWrap">
+        <div class="river-label">KINGDOM ZONE</div>
+        <div class="road-layer" id="roadLayer"></div>
+        <div class="iso-map" id="isoMap"></div>
+        <div class="agent-layer" id="agentLayer"></div>
+        <div class="float-layer" id="floatLayer"></div>
+      </div>
+
+      <div class="minimap" id="minimap" aria-label="Map navigator">
+        <div class="minimap-world" id="minimapWorld"></div>
+      </div>
+
+      <aside class="panel build-panel modal-panel" id="buildPanel" aria-label="Build menu">
+        <div class="panel-tab">BUILD</div>
+        <div class="panel-content build-panel-content">
+          <div class="panel-header"><span>BUILD MENU</span><i id="selectedLabel">NONE</i></div>
+          <div class="category-tabs" id="categoryTabs"></div>
+          <div class="building-list" id="buildingList"></div>
+          <p class="hint">Choose a building, then click a build tile. Roads boost output; buildings work best next to roads. Esc / right click cancels.</p>
+        </div>
+      </aside>
+
+      <aside class="panel status-panel modal-panel" id="statusPanel" aria-label="Status panel">
+        <div class="panel-tab">STATUS</div>
+        <div class="panel-content">
+          <div class="panel-header"><span>CITY STATUS</span><i id="incomeLabel">+0 / MO</i></div>
+          <div class="resource-bar" id="resourceBar"></div>
+        </div>
+      </aside>
+
+      <aside class="panel info-panel modal-panel" id="infoPanel" aria-label="Building details">
+        <div class="panel-tab" id="infoTab">INFO</div>
+        <div class="panel-content" id="infoContent">
+          <p class="empty-info">Click a placed building to inspect, upgrade, or demolish it.</p>
+        </div>
+      </aside>
+
+      <aside class="panel goal-panel modal-panel" id="goalPanel" aria-label="Quest panel">
+        <div class="panel-tab">GOALS</div>
+        <div class="panel-content">
+          <div class="panel-header"><span>QUESTS</span><i>LOG</i></div>
+          <ul class="goals" id="goals"></ul>
+          <div class="city-log" id="cityLog"></div>
+        </div>
+      </aside>
+
+      <aside class="panel settings-panel modal-panel" id="settingsPanel" aria-label="Settings panel">
+        <div class="panel-tab">SET</div>
+        <div class="panel-content">
+          <div class="panel-header"><span>TOOLS</span><i>SETUP</i></div>
+          <div class="settings-menu" id="settingsMenu" aria-label="Settings menu">
+            <button id="gridResetBtn">RESET ROADS</button>
+            <button id="inspectBtn">INSPECT</button>
+            <button id="heatBtn">HEATMAP</button>
+            <button id="soundToggleBtn">SOUND OFF</button>
+            <button class="reset-btn" id="resetBtn">RESET SAVE</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="message-strip" id="messageStrip">Plan roads, homes, services, shops, and landmarks.</div>
+
+      <nav class="bottom-dock" aria-label="Main panels">
+        <button id="buildDockBtn" data-modal="build" aria-controls="buildPanel" aria-expanded="false"><span>🏗️</span><b>BUILD</b></button>
+        <button id="statusDockBtn" data-modal="status" aria-controls="statusPanel" aria-expanded="false"><span>📊</span><b>STATUS</b></button>
+        <button id="goalsDockBtn" data-modal="goals" aria-controls="goalPanel" aria-expanded="false"><span>📜</span><b>QUESTS</b></button>
+        <button class="settings-btn" id="settingsToggleBtn" data-modal="settings" aria-expanded="false" aria-controls="settingsPanel"><span>⚙</span><b>TOOLS</b></button>
+      </nav>
+    </section>
+  </main>
+  <script src="./sfx.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cohub.local/static-management-game-theme-customization/manifest.schema.json",
+  "title": "Static Management Sheet Manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "sheets"
+  ],
+  "properties": {
+    "theme": {
+      "type": "string"
+    },
+    "log_dir": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["command", "openai"],
+          "default": "command",
+          "description": "'command' = subprocess CLI fallback; 'openai' = built-in HTTP driver"
+        },
+        "api_key": {
+          "type": "string",
+          "description": "OpenAI API key. Prefer api_key_env for shared manifests."
+        },
+        "api_key_env": {
+          "type": "string",
+          "default": "OPENAI_API_KEY"
+        },
+        "base_url": {
+          "type": "string",
+          "default": "https://api.openai.com/v1"
+        },
+        "model": {
+          "type": "string",
+          "default": "gpt-image-2"
+        },
+        "generate_command": {
+          "$ref": "#/$defs/commandTemplate"
+        },
+        "cutout_command": {
+          "$ref": "#/$defs/commandTemplate"
+        },
+        "cutout_method": {
+          "type": "string"
+        },
+        "cutout": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["rembg", "none", "command"],
+              "default": "command",
+              "description": "'rembg' = local rembg CLI; 'none' = skip background removal; 'command' = subprocess fallback via cutout_command"
+            },
+            "command": {
+              "$ref": "#/$defs/commandTemplate"
+            }
+          }
+        },
+        "timeout": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sleep_after_generate": {
+          "type": "number",
+          "minimum": 0
+        },
+        "sleep_after_cutout": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "sheets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sheet"
+      }
+    },
+    "camera_mode": {
+      "type": "string",
+      "enum": [
+        "isometric",
+        "rpg_topdown"
+      ],
+      "default": "isometric"
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "isometric",
+            "rpg_topdown"
+          ],
+          "default": "isometric"
+        },
+        "availableModes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "isometric",
+              "rpg_topdown"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "commandTemplate": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "sheet": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "prompt",
+        "raw",
+        "rows",
+        "cols",
+        "slices"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "default": "sheet"
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cutout": {
+          "type": "string"
+        },
+        "aspect": {
+          "type": "string",
+          "default": "1:1"
+        },
+        "generate_command": {
+          "$ref": "#/$defs/commandTemplate"
+        },
+        "cutout_command": {
+          "$ref": "#/$defs/commandTemplate"
+        },
+        "cutout_method": {
+          "type": "string"
+        },
+        "cutout_type": {
+          "type": "string",
+          "enum": ["rembg", "none", "command"],
+          "description": "Sheet-level override for provider.cutout.type"
+        },
+        "remove_background": {
+          "type": "boolean",
+          "default": false
+        },
+        "allow_cutout_resize": {
+          "type": "boolean",
+          "default": false
+        },
+        "final_opaque": {
+          "type": "boolean",
+          "default": true
+        },
+        "rows": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "cols": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        },
+        "timeout": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sleep_after_generate": {
+          "type": "number",
+          "minimum": 0
+        },
+        "sleep_after_cutout": {
+          "type": "number",
+          "minimum": 0
+        },
+        "slices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/slice"
+          }
+        },
+        "camera_mode": {
+          "type": "string",
+          "enum": [
+            "isometric",
+            "rpg_topdown"
+          ]
+        }
+      }
+    },
+    "slice": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "row",
+        "col",
+        "target"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        },
+        "row": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "col": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

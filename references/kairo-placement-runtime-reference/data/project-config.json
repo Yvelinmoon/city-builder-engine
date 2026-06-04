@@ -1,0 +1,130 @@
+{
+  "title": "Block City Builder",
+  "subtitle": "Modular City Management",
+  "brandMark": "$",
+  "startMoney": 18000,
+  "map": {
+    "cols": 16,
+    "rows": 12
+  },
+  "tickSeconds": 8,
+  "initialMessage": "Plan roads, homes, services, shops, and landmarks. Keep agents moving and the city growing.",
+  "victoryGoals": [
+    {
+      "id": "population",
+      "label": "Reach 800 population",
+      "metric": "population",
+      "target": 800
+    },
+    {
+      "id": "landmarks",
+      "label": "Build 5 landmark modules",
+      "metric": "landmarksBuilt",
+      "target": 5
+    },
+    {
+      "id": "culture",
+      "label": "Reach 180 culture",
+      "metric": "culture",
+      "target": 180
+    },
+    {
+      "id": "income",
+      "label": "Reach $5,000 monthly income",
+      "metric": "monthlyIncome",
+      "target": 5000
+    }
+  ],
+  "disclaimer": "Original city-management prototype using custom block-style assets.",
+  "camera": {
+    "mode": "isometric",
+    "availableModes": [
+      "isometric",
+      "rpg_topdown"
+    ],
+    "defaultMode": "isometric",
+    "notes": "isometric uses 2:1 diamond projection; rpg_topdown uses classic 2D RPG orthographic high-angle top-down grid projection."
+  },
+  "roads": {
+    "defaultType": "stone",
+    "notes": "Road rendering is data-driven. Each placed road stores a type; runtime selects camera-specific straight-x / straight-y / corner / cross assets from neighboring road connections. Missing legacy types migrate to defaultType.",
+    "types": [
+      {
+        "id": "stone",
+        "name": "Stone Path",
+        "cost": 80,
+        "assets": {
+          "isometric": "./assets/image2-clean/roads/stone-isometric.webp",
+          "topdown": "./assets/image2-clean/roads/stone-topdown.webp",
+          "variants": {
+            "isometric-straight-x": "./assets/image2-clean/roads/stone-isometric-straight-x.webp",
+            "isometric-straight-y": "./assets/image2-clean/roads/stone-isometric-straight-y.webp",
+            "isometric-corner": "./assets/image2-clean/roads/stone-isometric-corner.webp",
+            "isometric-cross": "./assets/image2-clean/roads/stone-isometric-cross.webp",
+            "topdown-straight-x": "./assets/image2-clean/roads/stone-topdown-straight-x.webp",
+            "topdown-straight-y": "./assets/image2-clean/roads/stone-topdown-straight-y.webp",
+            "topdown-corner": "./assets/image2-clean/roads/stone-topdown-corner.webp",
+            "topdown-cross": "./assets/image2-clean/roads/stone-topdown-cross.webp"
+          }
+        }
+      },
+      {
+        "id": "dirt",
+        "name": "Dirt Path",
+        "cost": 40,
+        "assets": {
+          "isometric": "./assets/image2-clean/roads/dirt-isometric.webp",
+          "topdown": "./assets/image2-clean/roads/dirt-topdown.webp",
+          "variants": {
+            "isometric-straight-x": "./assets/image2-clean/roads/dirt-isometric-straight-x.webp",
+            "isometric-straight-y": "./assets/image2-clean/roads/dirt-isometric-straight-y.webp",
+            "isometric-corner": "./assets/image2-clean/roads/dirt-isometric-corner.webp",
+            "isometric-cross": "./assets/image2-clean/roads/dirt-isometric-cross.webp",
+            "topdown-straight-x": "./assets/image2-clean/roads/dirt-topdown-straight-x.webp",
+            "topdown-straight-y": "./assets/image2-clean/roads/dirt-topdown-straight-y.webp",
+            "topdown-corner": "./assets/image2-clean/roads/dirt-topdown-corner.webp",
+            "topdown-cross": "./assets/image2-clean/roads/dirt-topdown-cross.webp"
+          }
+        }
+      },
+      {
+        "id": "grass",
+        "name": "Grass Trail",
+        "cost": 30,
+        "assets": {
+          "isometric": "./assets/image2-clean/roads/grass-isometric.webp",
+          "topdown": "./assets/image2-clean/roads/grass-topdown.webp",
+          "variants": {
+            "isometric-straight-x": "./assets/image2-clean/roads/grass-isometric-straight-x.webp",
+            "isometric-straight-y": "./assets/image2-clean/roads/grass-isometric-straight-y.webp",
+            "isometric-corner": "./assets/image2-clean/roads/grass-isometric-corner.webp",
+            "isometric-cross": "./assets/image2-clean/roads/grass-isometric-cross.webp",
+            "topdown-straight-x": "./assets/image2-clean/roads/grass-topdown-straight-x.webp",
+            "topdown-straight-y": "./assets/image2-clean/roads/grass-topdown-straight-y.webp",
+            "topdown-corner": "./assets/image2-clean/roads/grass-topdown-corner.webp",
+            "topdown-cross": "./assets/image2-clean/roads/grass-topdown-cross.webp"
+          }
+        }
+      },
+      {
+        "id": "wood",
+        "name": "Wood Plank Path",
+        "cost": 70,
+        "assets": {
+          "isometric": "./assets/image2-clean/roads/wood-isometric.webp",
+          "topdown": "./assets/image2-clean/roads/wood-topdown.webp",
+          "variants": {
+            "isometric-straight-x": "./assets/image2-clean/roads/wood-isometric-straight-x.webp",
+            "isometric-straight-y": "./assets/image2-clean/roads/wood-isometric-straight-y.webp",
+            "isometric-corner": "./assets/image2-clean/roads/wood-isometric-corner.webp",
+            "isometric-cross": "./assets/image2-clean/roads/wood-isometric-cross.webp",
+            "topdown-straight-x": "./assets/image2-clean/roads/wood-topdown-straight-x.webp",
+            "topdown-straight-y": "./assets/image2-clean/roads/wood-topdown-straight-y.webp",
+            "topdown-corner": "./assets/image2-clean/roads/wood-topdown-corner.webp",
+            "topdown-cross": "./assets/image2-clean/roads/wood-topdown-cross.webp"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+[
+  {
+    "id": "resident",
+    "name": "Resident",
+    "emoji": "👨‍👩‍👧",
+    "color": "#ffd166",
+    "from": [
+      "residential-01",
+      "residential-02",
+      "residential-03",
+      "residential-04"
+    ],
+    "to": [
+      "commercial-01",
+      "service-03",
+      "service-01",
+      "service-02",
+      "commercial-03"
+    ],
+    "lines": [
+      "Heading out for supplies.",
+      "The nearby park is convenient.",
+      "This block is getting lively."
+    ],
+    "effect": {
+      "satisfaction": 1,
+      "commerce": 1
+    }
+  },
+  {
+    "id": "tourist",
+    "name": "Tourist",
+    "emoji": "📷",
+    "color": "#ef476f",
+    "from": [
+      "transport-02",
+      "transport-03"
+    ],
+    "to": [
+      "landmark-01",
+      "landmark-03",
+      "landmark-04",
+      "landmark-06",
+      "landmark-05",
+      "shanghai-service-04",
+      "astronomy-service-04"
+    ],
+    "lines": [
+      "I want to see the landmarks!",
+      "This block tower photographs well.",
+      "Checked in for the day."
+    ],
+    "effect": {
+      "popularity": 2,
+      "traffic": 1,
+      "commerce": 1
+    }
+  },
+  {
+    "id": "worker",
+    "name": "Worker",
+    "emoji": "💼",
+    "color": "#118ab2",
+    "from": [
+      "transport-02",
+      "residential-03",
+      "residential-04"
+    ],
+    "to": [
+      "commercial-04",
+      "commercial-03",
+      "landmark-02"
+    ],
+    "lines": [
+      "Maintenance route confirmed.",
+      "The build queue is moving.",
+      "Another module is online."
+    ],
+    "effect": {
+      "commerce": 2,
+      "traffic": 1
+    }
+  },
+  {
+    "id": "student",
+    "name": "Student",
+    "emoji": "🎒",
+    "color": "#06d6a0",
+    "from": [
+      "residential-01",
+      "residential-03"
+    ],
+    "to": [
+      "service-01",
+      "service-03",
+      "service-04",
+      "shanghai-service-04"
+    ],
+    "lines": [
+      "Campus services look useful.",
+      "Learning spaces are expanding.",
+      "This district feels inspiring."
+    ],
+    "effect": {
+      "culture": 1,
+      "satisfaction": 1
+    }
+  },
+  {
+    "id": "delivery",
+    "name": "Agent 5",
+    "emoji": "🛵",
+    "color": "#f77f00",
+    "from": [
+      "commercial-02",
+      "commercial-05",
+      "commercial-03"
+    ],
+    "to": [
+      "residential-01",
+      "residential-02",
+      "residential-03",
+      "commercial-04"
+    ],
+    "lines": [
+      "City route confirmed.",
+      "This zone is growing.",
+      "Another day in the city."
+    ],
+    "effect": {
+      "commerce": 2,
+      "traffic": 1
+    }
+  },
+  {
+    "id": "urbanist",
+    "name": "Agent 6",
+    "emoji": "👷",
+    "color": "#8d99ae",
+    "from": [
+      "transport-01",
+      "transport-02"
+    ],
+    "to": [
+      "transport-01",
+      "service-03",
+      "service-02",
+      "service-01"
+    ],
+    "lines": [
+      "City route confirmed.",
+      "This zone is growing.",
+      "Another day in the city."
+    ],
+    "effect": {
+      "satisfaction": 1,
+      "traffic": -1
+    }
+  }
+]

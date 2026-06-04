@@ -1,0 +1,4 @@
+Pillow>=10.0.0
+requests>=2.31.0
+# Optional: uncomment if you plan to use provider.cutout.type=rembg
+# rembg>=2.0.50

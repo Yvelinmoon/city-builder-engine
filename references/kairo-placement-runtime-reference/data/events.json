@@ -1,0 +1,45 @@
+[
+  {
+    "id": "holiday",
+    "title": "Holiday Rush",
+    "every": 7,
+    "effect": {
+      "popularity": 6,
+      "traffic": 8,
+      "money": 900
+    },
+    "message": "Holiday crowds arrive. Popularity rises, but traffic gets heavier."
+  },
+  {
+    "id": "rain",
+    "title": "Rain Season",
+    "every": 11,
+    "effect": {
+      "commerce": -3,
+      "satisfaction": -2,
+      "traffic": 2
+    },
+    "message": "Rain affects trips and slows commerce."
+  },
+  {
+    "id": "expo-memory",
+    "title": "Expo Memory",
+    "every": 13,
+    "effect": {
+      "culture": 8,
+      "popularity": 5,
+      "money": 500
+    },
+    "message": "City event resolved."
+  },
+  {
+    "id": "rush-hour",
+    "title": "Rush Hour",
+    "every": 5,
+    "effect": {
+      "traffic": 5,
+      "commerce": 2
+    },
+    "message": "City event resolved."
+  }
+]

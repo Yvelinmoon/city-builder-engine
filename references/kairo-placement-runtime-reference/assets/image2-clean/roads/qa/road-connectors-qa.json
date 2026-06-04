@@ -1,0 +1,442 @@
+{
+  "stone-isometric-straight-x": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      6,
+      82,
+      251,
+      179
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "stone-isometric-straight-y": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      81,
+      6,
+      176,
+      251
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "stone-isometric-corner": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      82,
+      84,
+      246,
+      247
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "stone-isometric-cross": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      6,
+      6,
+      251,
+      251
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "stone-topdown-straight-x": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      0,
+      86,
+      256,
+      177
+    ],
+    "components": 1,
+    "edgeHits": [
+      "left",
+      "right"
+    ]
+  },
+  "stone-topdown-straight-y": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      84,
+      0,
+      173,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "top"
+    ]
+  },
+  "stone-topdown-corner": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      84,
+      85,
+      256,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "right"
+    ]
+  },
+  "stone-topdown-cross": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      0,
+      0,
+      256,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "left",
+      "right",
+      "top"
+    ]
+  },
+  "dirt-isometric-straight-x": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      6,
+      82,
+      251,
+      179
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "dirt-isometric-straight-y": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      81,
+      6,
+      176,
+      251
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "dirt-isometric-corner": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      82,
+      84,
+      246,
+      247
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "dirt-isometric-cross": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      6,
+      6,
+      251,
+      251
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "dirt-topdown-straight-x": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      0,
+      86,
+      256,
+      177
+    ],
+    "components": 1,
+    "edgeHits": [
+      "left",
+      "right"
+    ]
+  },
+  "dirt-topdown-straight-y": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      84,
+      0,
+      173,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "top"
+    ]
+  },
+  "dirt-topdown-corner": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      84,
+      85,
+      256,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "right"
+    ]
+  },
+  "dirt-topdown-cross": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      0,
+      0,
+      256,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "left",
+      "right",
+      "top"
+    ]
+  },
+  "grass-isometric-straight-x": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      6,
+      82,
+      251,
+      179
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "grass-isometric-straight-y": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      81,
+      6,
+      176,
+      251
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "grass-isometric-corner": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      82,
+      84,
+      246,
+      247
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "grass-isometric-cross": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      6,
+      6,
+      251,
+      251
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "grass-topdown-straight-x": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      0,
+      86,
+      256,
+      177
+    ],
+    "components": 1,
+    "edgeHits": [
+      "left",
+      "right"
+    ]
+  },
+  "grass-topdown-straight-y": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      84,
+      0,
+      173,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "top"
+    ]
+  },
+  "grass-topdown-corner": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      84,
+      85,
+      256,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "right"
+    ]
+  },
+  "grass-topdown-cross": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      0,
+      0,
+      256,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "left",
+      "right",
+      "top"
+    ]
+  },
+  "wood-isometric-straight-x": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      6,
+      82,
+      251,
+      179
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "wood-isometric-straight-y": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      81,
+      6,
+      176,
+      251
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "wood-isometric-corner": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      82,
+      84,
+      246,
+      247
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "wood-isometric-cross": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      6,
+      6,
+      251,
+      251
+    ],
+    "components": 1,
+    "edgeHits": []
+  },
+  "wood-topdown-straight-x": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      0,
+      86,
+      256,
+      177
+    ],
+    "components": 1,
+    "edgeHits": [
+      "left",
+      "right"
+    ]
+  },
+  "wood-topdown-straight-y": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      84,
+      0,
+      173,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "top"
+    ]
+  },
+  "wood-topdown-corner": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      84,
+      85,
+      256,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "right"
+    ]
+  },
+  "wood-topdown-cross": {
+    "ok": true,
+    "issues": [],
+    "bbox": [
+      0,
+      0,
+      256,
+      256
+    ],
+    "components": 1,
+    "edgeHits": [
+      "bottom",
+      "left",
+      "right",
+      "top"
+    ]
+  }
+}

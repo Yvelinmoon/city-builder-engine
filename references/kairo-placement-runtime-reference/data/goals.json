@@ -1,0 +1,113 @@
+[
+  {
+    "id": "first-transport-01",
+    "label": "Lay the first road",
+    "type": "built",
+    "building": "transport-01",
+    "count": 1,
+    "reward": {
+      "money": 300,
+      "popularity": 2
+    },
+    "message": "Road access opened. The build crew is on site."
+  },
+  {
+    "id": "first-home",
+    "label": "Welcome first residents",
+    "type": "categoryBuilt",
+    "category": "residential",
+    "count": 2,
+    "reward": {
+      "money": 600,
+      "satisfaction": 5
+    },
+    "message": "Residents start moving into the new district."
+  },
+  {
+    "id": "public-service",
+    "label": "Complete public services",
+    "type": "categoryBuilt",
+    "category": "service",
+    "count": 2,
+    "reward": {
+      "money": 900,
+      "satisfaction": 8,
+      "culture": 4
+    },
+    "message": "Public services improve satisfaction."
+  },
+  {
+    "id": "commerce-block",
+    "label": "Form a commerce block",
+    "type": "categoryBuilt",
+    "category": "commercial",
+    "count": 3,
+    "reward": {
+      "money": 1200,
+      "commerce": 8
+    },
+    "message": "The commercial district starts attracting crowds."
+  },
+  {
+    "id": "tour-route",
+    "label": "Create a sightseeing route",
+    "type": "categoryBuilt",
+    "category": "landmark",
+    "count": 2,
+    "reward": {
+      "money": 1200,
+      "popularity": 10,
+      "culture": 8
+    },
+    "message": "Visitors start talking about your landmark route."
+  },
+  {
+    "id": "transport-02-hub",
+    "label": "Build a transit hub",
+    "type": "built",
+    "building": "transport-02",
+    "count": 1,
+    "reward": {
+      "traffic": -10,
+      "popularity": 6
+    },
+    "message": "The transit hub eases pressure."
+  },
+  {
+    "id": "lujiazui-card",
+    "label": "Light up the skyline",
+    "type": "built",
+    "building": "landmark-02",
+    "count": 1,
+    "reward": {
+      "money": 1800,
+      "commerce": 10,
+      "popularity": 8
+    },
+    "message": "The core landmark becomes a skyline icon."
+  },
+  {
+    "id": "culture-city",
+    "label": "Reach 120 culture",
+    "type": "metric",
+    "metric": "culture",
+    "target": 120,
+    "reward": {
+      "money": 1800,
+      "popularity": 8
+    },
+    "message": "The city has a recognizable culture brand."
+  },
+  {
+    "id": "mega-city",
+    "label": "Reach 800 population",
+    "type": "metric",
+    "metric": "population",
+    "target": 800,
+    "reward": {
+      "money": 3000,
+      "satisfaction": 10
+    },
+    "message": "The city enters mature operation."
+  }
+]

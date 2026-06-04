@@ -1,0 +1,34 @@
+{
+  "slug": "press-start-2p",
+  "title": "Press Start 2P",
+  "category": "monospaced",
+  "license": "OFL (SIL Open Font License)",
+  "designer": "",
+  "face_css_url": "https://fontlibrary.org/face/press-start-2p",
+  "source_url": "https://fontlibrary.org/en/font/press-start-2p",
+  "font_families": [
+    "PressStart2PRegular"
+  ],
+  "font_face_details": [
+    {
+      "family": "PressStart2PRegular",
+      "src": "https://fontlibrary.org/assets/fonts/press-start-2p/6b0a4bbcec8eb53940cbfcb409a788ee/74496d9086d97aaeeafb3085e9957668/PressStart2PRegular.ttf",
+      "weight": "normal",
+      "style": "normal"
+    },
+    {
+      "family": "Press Start 2P",
+      "src": "https://fontlibrary.org/assets/fonts/press-start-2p/6b0a4bbcec8eb53940cbfcb409a788ee/74496d9086d97aaeeafb3085e9957668/PressStart2PRegular.ttf",
+      "weight": "normal",
+      "style": "normal"
+    }
+  ],
+  "files": [
+    {
+      "filename": "PressStart2PRegular.ttf",
+      "format": "ttf",
+      "size": 82480
+    }
+  ],
+  "install_path": "assets/fonts/monospaced/press-start-2p"
+}
