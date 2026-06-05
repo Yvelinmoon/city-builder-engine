@@ -91,7 +91,7 @@ These engine files are generic and should not contain project-specific IDs, imag
 This skill is self-contained in one folder:
 
 ```text
-static-management-game-theme-customization/
+city-builder-engine/
 ├── SKILL.md
 ├── docs/
 │   ├── NOTES.md
@@ -108,6 +108,7 @@ static-management-game-theme-customization/
 │   ├── standard-4x4-sheet-policy.md
 │   ├── common-runtime-assets.md
 │   ├── layout-guides/
+│   │   ├── faint-4x4-sheet-grid.png
 │   │   └── standard-4x4-asset-sheet-grid.png
 │   ├── showcase-and-publishing.md
 │   └── kairo-placement-runtime-reference/
@@ -139,7 +140,7 @@ static-management-game-theme-customization/
 
 3. **Create a sheet manifest**
    - Default every deterministic crop sheet to the standard 4×4 square layout: 1024×1024 canvas, 4 rows, 4 columns, 256×256 cells, 32 px safe padding.
-   - Use the standard 4×4 layout reference image for image-to-image generation whenever supported: `references/layout-guides/standard-4x4-asset-sheet-grid.png`.
+   - Use the faint standard 4×4 layout reference image for image-to-image generation whenever supported: `references/layout-guides/faint-4x4-sheet-grid.png`. Keep `references/layout-guides/standard-4x4-asset-sheet-grid.png` as a stronger QA/manual reference.
    - Define one crop slot per final asset and use row-major order from left to right, top to bottom.
    - If fewer than 16 assets are needed, keep the 4×4 sheet and mark unused slots in the manifest; do not silently switch to irregular layouts.
    - Include sheet size, grid geometry, crop geometry, target path, prompt description, and status fields.
