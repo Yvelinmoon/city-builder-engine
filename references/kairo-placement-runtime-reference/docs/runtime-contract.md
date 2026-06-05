@@ -97,9 +97,9 @@ Road drawing supports multiple visual path styles without changing road adjacenc
 
 - `data/project-config.json` defines `roads.defaultType` and `roads.types[]`.
 - Each road type has `id`, `name`, `cost`, and camera-specific base assets `assets.isometric` / `assets.topdown`.
-- For production-quality preset roads, each type should also expose reusable connection-shape variants under `assets.variants`:
-  - `isometric-straight-x`, `isometric-straight-y`, `isometric-corner`, `isometric-cross`;
+- For production-quality top-down preset roads, each type should expose reusable connection-shape variants under `assets.variants`:
   - `topdown-straight-x`, `topdown-straight-y`, `topdown-corner`, `topdown-cross`.
+- Isometric variants are optional compatibility files only. The runtime must not select them in isometric mode.
 - In isometric camera mode, the runtime renders each road cell with the road type's fixed authored `assets.isometric` tile. It must not select connector variants, rotate sprites, or apply turn-specific logic; the generated isometric tile already owns the fixed camera perspective.
 - In top-down camera mode, the runtime may derive each placed road cell's visual shape from same-type north / east / south / west neighbors and choose the matching `topdown-*` variant. Road sprites must still be rendered in their authored orientation; the runtime must not rotate road assets with CSS because rotation breaks painted perspective and lighting.
 - Build menu transport entries can expose path choices with `category: "transport"`, `assetKind: "road"`, and `roadType`.
@@ -109,7 +109,7 @@ Road drawing supports multiple visual path styles without changing road adjacenc
 - Agent pathfinding and road adjacency continue to use road coordinates only; visual road type does not split or block connectivity.
 - Road cost uses the active road type cost.
 
-Default variants bundled with the reference runtime are `stone`, `dirt`, `grass`, and `wood`. Each default type includes both camera modes and four reusable connection shapes. Keep the older `road-isometric.webp` / `road-topdown.webp` and material base assets as compatibility aliases when possible.
+Default road materials bundled with the reference runtime are `stone`, `dirt`, `grass`, and `wood`. Each default type includes a fixed isometric authored tile plus top-down connection shapes. Keep the older `road-isometric.webp` / `road-topdown.webp` and material base assets as compatibility aliases when possible.
 
 ## Depth ordering contract
 
