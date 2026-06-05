@@ -1,9 +1,9 @@
 ---
-name: static-management-game-theme-customization
+name: city-builder-engine
 description: Preserve and reuse an existing static HTML/CSS/JS management, builder, placement, room-care, farming-town, or Kairo-like game runtime while customizing it into a new playable theme. Use this skill whenever the user asks to “改主题”, “重做一个 XX 题材游戏”, “换成 XX 风格”, “基于这个项目做新版”, “reskin”, or “theme customization” for an existing static game, even if they do not explicitly say to preserve code. Default to cloning and reusing the source runtime/data/UI/contracts; do not rebuild gameplay from scratch unless the user explicitly requests a new mechanic/engine. Update data/copy/settings as needed, regenerate provider-backed visual assets, run mandatory no-crop background removal/cutout/cropping/normalization, perform visual QA, and publish a clean demo.
 ---
 
-# Static Management Game Theme Customization
+# City Builder Engine
 
 Use this skill when a user wants to keep an existing playable static management / placement game runtime **functionally stable** while turning it into a new custom themed prototype. This may include data/copy/theme updates plus provider-generated visual assets. The usual asset path is sheet-aware: generate sheet images, preserve/cut out their backgrounds, crop them into final assets, visually QA them, then replace runtime files.
 
@@ -65,6 +65,7 @@ Before concrete generation, read:
 ```text
 docs/STEPS.md
 docs/NOTES.md
+docs/PROVIDER_SETUP.md
 prompts/PROMPT_TEMPLATES.md
 references/manifest-and-discovery.md
 references/sheet-generation-and-cropping.md
@@ -293,8 +294,9 @@ Final runtime assets remain at the project’s existing runtime asset paths, as 
 - Prefer one generated sheet per logical family.
 - Preserve and copy bundled common runtime primitives by default: `assets/image2-clean/roads/road-isometric.webp`, `assets/image2-clean/roads/road-topdown.webp`, and `assets/image2-clean/common/`. These are not to be replaced with CSS/SVG strips or local placeholder drawings unless explicitly requested.
 - Default deterministic crop sheets to the standard 4×4 square sheet policy: 1024×1024, 4×4 grid, 16 slots, 256×256 cells, 32 px safe padding, row-major slot order.
-- Use `references/layout-guides/standard-4x4-asset-sheet-grid.png` as an image-to-image layout reference whenever the provider supports references.
+- Use `references/layout-guides/faint-4x4-sheet-grid.png` as the default image-to-image layout reference whenever the provider supports references. The stronger `standard-4x4-asset-sheet-grid.png` remains available for QA/manual reference.
 - Make the sheet prompt explicit about the final slot order.
+- In OpenAI provider mode, the engine attaches `references/layout-guides/faint-4x4-sheet-grid.png` by default when it exists and `use_layout_reference` is not false. Prompts must treat it as spatial guidance only and explicitly say not to reproduce grid lines/safe boxes in the final image.
 - Use a clean white or near-white background in the sheet generation prompt.
 - If the sheet will later be cropped, keep the grid regular and avoid irregular overlap; reject irregular collage-like sheets even if the art looks good.
 - For sheet-based sprites/items/buildings, request:
