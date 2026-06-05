@@ -6,7 +6,7 @@ The engine is provider-neutral and supports two generation modes, plus three bac
 
 ### `openai` — built-in HTTP driver
 
-Calls OpenAI Images API (`/v1/images/generations`) directly. No external CLI required.
+Calls OpenAI Images API directly. No external CLI required. By default, if the faint 4×4 layout guide exists, the engine sends it as an image reference via the edit endpoint; otherwise it falls back to text-only generation.
 
 Required fields:
 
@@ -17,6 +17,8 @@ Required fields:
 | `api_key_env` | string | `"OPENAI_API_KEY"` | Env variable to read the key from |
 | `base_url` | string | `"https://api.openai.com/v1"` | Set this for OpenAI-compatible proxies |
 | `model` | string | `"gpt-image-2"` | Also supports `dall-e-3` |
+| `layout_reference` | string | `"references/layout-guides/faint-4x4-sheet-grid.png"` | Optional 4×4 guide image for layout-stable sheet generation |
+| `use_layout_reference` | boolean | `true` | Disable if your provider/model does not support image references |
 | `timeout` | integer | `120` | HTTP request timeout in seconds |
 
 **Minimal manifest example:**
@@ -26,10 +28,14 @@ Required fields:
   "provider": {
     "type": "openai",
     "api_key_env": "OPENAI_API_KEY",
-    "model": "gpt-image-2"
+    "model": "gpt-image-2",
+    "layout_reference": "references/layout-guides/faint-4x4-sheet-grid.png",
+    "use_layout_reference": true
   }
 }
 ```
+
+When `use_layout_reference` is enabled and the reference image exists, the OpenAI driver prepends prompt guidance saying the grid is for layout only and must not be visible in the final output. If your OpenAI-compatible endpoint only supports text-to-image generation, set `"use_layout_reference": false`.
 
 **Aspect-to-size mapping:**
 

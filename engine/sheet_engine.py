@@ -93,8 +93,13 @@ def _resolve_api_key(provider: dict[str, Any]) -> str:
     return key
 
 
-def generate_sheet_openai(prompt: str, aspect: str, provider: dict[str, Any]) -> dict[str, Any]:
+def generate_sheet_openai(prompt: str, aspect: str, provider: dict[str, Any], layout_reference: Path | None = None) -> dict[str, Any]:
     """Built-in OpenAI Images API generation driver.
+
+    If layout_reference is provided, the engine uses the Images edit endpoint and
+    sends the faint 4x4 grid as an image reference. The prompt must still tell
+    the model to use the grid as layout guidance only and not reproduce grid
+    lines in the output.
 
     Returns a dict compatible with the engine's artifact format:
     {"artifacts": [{"url": "...", "uuid": "..."}]}
@@ -105,13 +110,24 @@ def generate_sheet_openai(prompt: str, aspect: str, provider: dict[str, Any]) ->
 
     size_map = {"1:1": "1024x1024", "16:9": "1792x1024", "9:16": "1024x1792"}
     size = size_map.get(aspect, "1024x1024")
+    headers = {"Authorization": f"Bearer {api_key}"}
 
-    resp = requests.post(
-        f"{base_url}/images/generations",
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-        json={"model": model, "prompt": prompt, "size": size, "n": 1, "response_format": "url"},
-        timeout=int(provider.get("timeout", 120)),
-    )
+    if layout_reference and layout_reference.exists():
+        with layout_reference.open("rb") as image_file:
+            resp = requests.post(
+                f"{base_url}/images/edits",
+                headers=headers,
+                data={"model": model, "prompt": prompt, "size": size, "n": "1", "response_format": "url"},
+                files={"image": (layout_reference.name, image_file, "image/png")},
+                timeout=int(provider.get("timeout", 120)),
+            )
+    else:
+        resp = requests.post(
+            f"{base_url}/images/generations",
+            headers={**headers, "Content-Type": "application/json"},
+            json={"model": model, "prompt": prompt, "size": size, "n": 1, "response_format": "url"},
+            timeout=int(provider.get("timeout", 120)),
+        )
     resp.raise_for_status()
     data = resp.json()
     image_data = data["data"][0]
@@ -481,6 +497,20 @@ def process_sheet(root: Path, log_dir: Path, kind: str, sheet: dict[str, Any], p
     provider_type = str(provider.get("type", "command")).lower()
     cutout_cfg = provider.get("cutout") or {}
     cutout_type = str(cutout_cfg.get("type") if isinstance(cutout_cfg, dict) else "").lower() or "command"
+    layout_reference_value = sheet.get("layout_reference") or provider.get("layout_reference") or (manifest or {}).get("layout_reference") or "references/layout-guides/faint-4x4-sheet-grid.png"
+    layout_reference_path = Path(str(layout_reference_value))
+    if not layout_reference_path.is_absolute():
+        layout_reference_path = root / layout_reference_path
+    use_layout_reference = bool(sheet.get("use_layout_reference", provider.get("use_layout_reference", True)))
+    active_layout_reference = layout_reference_path if use_layout_reference and layout_reference_path.exists() else None
+    if active_layout_reference and provider_type == "openai":
+        prompt = (
+            "Use the attached faint 4x4 grid image strictly as a spatial layout reference. "
+            "Place one complete asset in each cell, keep every asset centered inside its cell and inside the safe padding area. "
+            "The grid is guidance only: do not reproduce, trace, preserve, or redraw any grid lines, safe boxes, labels, borders, or guide marks in the final image. "
+            "Final output should be clean objects on a simple white or near-white background with no visible grid. "
+            + prompt
+        )
 
     # Legacy fallback: if no cutout.type but provider has cutout_command, behave as command
     sheet_generate_template = sheet.get("generate_command") or provider.get("generate_command")
@@ -495,7 +525,7 @@ def process_sheet(root: Path, log_dir: Path, kind: str, sheet: dict[str, Any], p
         generate_data = read_json(generate_log)
     else:
         if provider_type == "openai":
-            generate_data = generate_sheet_openai(prompt, aspect, provider)
+            generate_data = generate_sheet_openai(prompt, aspect, provider, active_layout_reference)
         else:
             command = command_from_template(sheet_generate_template, prompt=prompt, aspect=aspect, id=sheet_id, kind=kind)
             generate_data = run_command(command, cwd=root, timeout=int(sheet.get("timeout", provider.get("timeout", 480))))

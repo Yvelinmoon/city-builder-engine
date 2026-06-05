@@ -14,16 +14,16 @@ white or near-white sheet background
 no labels / text / UI
 ```
 
-Use the standard reference grid for image-to-image generation whenever the provider supports references:
+Use the faint standard reference grid for image-to-image generation whenever the provider supports references:
+
+```text
+references/layout-guides/faint-4x4-sheet-grid.png
+```
+
+The older high-contrast guide is kept as a QA/reference artifact:
 
 ```text
 references/layout-guides/standard-4x4-asset-sheet-grid.png
-```
-
-Public preview:
-
-```text
-https://public.cohub.run/s/ed597b1a-27b4-42c6-b66a-c0dff7dc4809/standard-4x4-asset-sheet-grid.png
 ```
 
 ## Why this is mandatory
@@ -61,7 +61,7 @@ Exceptions require an explicit note in the manifest and report:
 Every generated crop sheet prompt must include all of the following:
 
 ```text
-Use the provided 4×4 reference grid as a strict layout guide.
+Use the provided faint 4×4 reference grid strictly as a spatial layout guide.
 Create a 1024×1024 square asset sheet with exactly 4 columns and 4 rows, 16 slots total.
 Keep every asset centered inside its own cell.
 Do not move, warp, rotate, hide, merge, subdivide, or redraw the grid layout.
@@ -69,7 +69,8 @@ Do not cross cell borders. Do not overlap adjacent cells.
 Each object must stay within the inner safe square of its cell with clear padding.
 One asset per slot, no extra objects, no missing slots.
 Preserve the exact slot order from left to right, top to bottom.
-White or near-white background, no text, no labels, no UI, no watermark, no logo.
+The reference grid is guidance only: do not reproduce, trace, preserve, or redraw grid lines, safe boxes, labels, borders, or guide marks in the final image.
+White or near-white background, no visible grid, no text, no labels, no UI, no watermark, no logo.
 ```
 
 Then add the theme, camera, size class, and slot list.
@@ -77,28 +78,29 @@ Then add the theme, camera, size class, and slot list.
 Example:
 
 ```text
-ref_img-{reference_uuid}, use the provided 4×4 reference grid as a strict layout guide.
+ref_img-{reference_uuid}, use the provided faint 4×4 reference grid as a strict spatial layout guide only.
 Create a 1024×1024 square white-background asset sheet with exactly 4 columns and 4 rows, 16 slots total.
 Theme: cozy medieval market town buildings, original game assets.
 Camera: strict isometric 2:1 view, consistent angle in every slot.
 Size class: medium buildings, each building fills 65–75% of the slot height with 12–18% padding.
 Slot order, left to right, top to bottom:
 slot 1: bakery shop; slot 2: tailor shop; ... slot 16: small fountain plaza.
-Keep every asset centered inside its own cell and inside the blue safe box.
+Keep every asset centered inside its own cell and inside the safe padding area.
 Do not cross cell borders. Do not overlap adjacent cells. One asset per slot. No extra objects. No missing slots.
-White background, no text, no labels, no UI, no watermark, no logo.
+Do not reproduce, trace, preserve, or redraw the grid lines / safe boxes / guide marks. White background, no visible grid, no text, no labels, no UI, no watermark, no logo.
 ```
 
 ## Reference use
 
 When the generation provider supports image references:
 
-1. Upload `references/layout-guides/standard-4x4-asset-sheet-grid.png`.
-2. Include the returned `ref_img-{uuid}` in the prompt.
+1. Use `references/layout-guides/faint-4x4-sheet-grid.png` as the default reference image.
+2. Include the returned `ref_img-{uuid}` in the prompt if your provider requires explicit reference IDs. The built-in OpenAI driver attaches this image automatically.
 3. Explicitly state that the reference is a **layout guide**, not a visual style guide.
-4. Ask the model to keep objects inside the blue safe boxes.
+4. Ask the model to keep objects inside the safe-padding region.
+5. Explicitly state that grid lines, safe boxes, borders, and guide marks must not appear in the final output.
 
-Do not ask the model to remove the guide lines during generation if doing so causes slot drift. It is acceptable for faint guide lines to remain in the raw sheet because the required cutout / background-removal step should remove the sheet background before final per-cell assets are normalized.
+The guide lines are intentionally pale: visible enough to stabilize model layout, but close enough to the white background that `rembg` or other no-crop cutout tools can remove them if faint remnants survive generation.
 
 ## Manifest requirements
 
@@ -111,7 +113,7 @@ Every 4×4 sheet manifest entry should include:
   "canvas": [1024, 1024],
   "cell": [256, 256],
   "safePadding": 32,
-  "layoutReference": "references/layout-guides/standard-4x4-asset-sheet-grid.png",
+  "layoutReference": "references/layout-guides/faint-4x4-sheet-grid.png",
   "slotOrder": "row-major-left-to-right-top-to-bottom"
 }
 ```

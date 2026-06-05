@@ -14,13 +14,19 @@ For deterministic crop sheets, use the standard 4×4 sheet policy by default. Th
 row-major slot order left to right, top to bottom
 ```
 
-Use the standard layout reference as image-to-image guide whenever supported:
+Use the faint standard layout reference as an image-to-image guide whenever supported:
+
+```text
+references/layout-guides/faint-4x4-sheet-grid.png
+```
+
+This guide uses very light grid and safe-padding lines. The prompt must say the grid is **layout guidance only** and must not appear in the final output. The older stronger guide remains available for manual QA/reference:
 
 ```text
 references/layout-guides/standard-4x4-asset-sheet-grid.png
 ```
 
-Read the detailed policy before generation:
+The built-in OpenAI driver automatically attaches `references/layout-guides/faint-4x4-sheet-grid.png` by default when it exists. The engine prepends prompt guidance that says: use this as a spatial guide only, place one asset per cell, and do not reproduce grid/safe-box lines in the output. Override with `provider.layout_reference`, `sheet.layout_reference`, or disable with `use_layout_reference: false`.
 
 ```text
 references/standard-4x4-sheet-policy.md

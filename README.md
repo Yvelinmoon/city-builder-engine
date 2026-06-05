@@ -54,7 +54,7 @@ export OPENAI_API_KEY="sk-..."
 
 ### 3. Write a manifest
 
-Create `manifest.json`:
+Create `manifest.json`. The OpenAI driver uses `references/layout-guides/faint-4x4-sheet-grid.png` as a default image reference to stabilize the 4×4 layout. You can override it with `provider.layout_reference` or disable it with `use_layout_reference: false`.
 
 ```json
 {
@@ -64,6 +64,8 @@ Create `manifest.json`:
     "type": "openai",
     "api_key_env": "OPENAI_API_KEY",
     "model": "gpt-image-2",
+    "layout_reference": "references/layout-guides/faint-4x4-sheet-grid.png",
+    "use_layout_reference": true,
     "cutout": {
       "type": "rembg"
     }
@@ -156,6 +158,7 @@ city-builder-engine/
 - **Sheet** — one generated image (e.g. 1024×1024) containing multiple assets in a grid.
 - **Slice** — a single cell in the sheet, defined by `row` and `col`, mapped to a final `target` file.
 - **Provider** — the image generation driver (`openai` or `command`).
+- **Layout reference** — a faint 1024×1024 4×4 guide image attached to image-generation calls to stabilize slot placement.
 - **Cutout** — background removal step that runs before cropping.
 
 ---

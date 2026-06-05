@@ -38,19 +38,20 @@ no text, no watermark, no logo, no brand marks, no UI, no labels, no caption tex
 
 ## Standard 4×4 white-background sheet prompt
 
-Use when the goal is to generate a single sheet that will be cropped later. This is the default for deterministic crop sheets. Use `references/layout-guides/standard-4x4-asset-sheet-grid.png` as an image-to-image layout reference whenever supported.
+Use when the goal is to generate a single sheet that will be cropped later. This is the default for deterministic crop sheets. Use `references/layout-guides/faint-4x4-sheet-grid.png` as an image-to-image layout reference whenever supported. The built-in OpenAI driver attaches it automatically by default.
 
 ```text
-ref_img-{layout_reference_uuid}, use the provided 4×4 reference grid as a strict layout guide, not as visual style.
+ref_img-{layout_reference_uuid}, use the provided faint 4×4 reference grid as a strict spatial layout guide, not as visual style.
 {theme}, 1024×1024 square white-background asset sheet, exactly 4 columns by 4 rows, 16 slots total, {slot_list},
 consistent style across all slots, same camera angle and same scale,
 all objects use a uniform game-icon bounding box, each object fills about 70% of its slot height,
-keep every asset centered inside its own cell and inside the blue safe box,
+keep every asset centered inside its own cell and inside the safe padding area,
 32 px safe padding inside every cell, clear spacing between slots, regular grid,
 do not move, warp, rotate, hide, merge, subdivide, or redraw the grid layout,
 do not cross cell borders, do not overlap adjacent cells, one asset per slot, no missing slots, no extra objects,
 preserve exact row-major slot order from left to right, top to bottom,
-simple white or near-white background, no text, no watermark, no logo, no labels
+the reference grid is guidance only: do not reproduce, trace, preserve, or redraw any grid lines, safe boxes, labels, borders, or guide marks in the final image,
+simple white or near-white background, no visible grid, no text, no watermark, no logo, no labels
 ```
 
 If references are unavailable, keep the same prompt but remove `ref_img-{layout_reference_uuid}` and make the 4×4 geometry even more explicit.

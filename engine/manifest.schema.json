@@ -40,6 +40,15 @@
           "type": "string",
           "default": "gpt-image-2"
         },
+        "layout_reference": {
+          "type": "string",
+          "default": "references/layout-guides/faint-4x4-sheet-grid.png",
+          "description": "Optional image reference used by OpenAI edit mode to stabilize sheet layout"
+        },
+        "use_layout_reference": {
+          "type": "boolean",
+          "default": true
+        },
         "generate_command": {
           "$ref": "#/$defs/commandTemplate"
         },
@@ -166,6 +175,14 @@
         "aspect": {
           "type": "string",
           "default": "1:1"
+        },
+        "layout_reference": {
+          "type": "string",
+          "description": "Sheet-level layout reference image path"
+        },
+        "use_layout_reference": {
+          "type": "boolean",
+          "description": "Sheet-level override for provider.use_layout_reference"
         },
         "generate_command": {
           "$ref": "#/$defs/commandTemplate"
