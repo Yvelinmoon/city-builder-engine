@@ -78,6 +78,18 @@ Runtime camera configuration can be supplied in `data/project-config.json`:
 
 The settings panel includes a camera toggle for quick QA. Grid calibration persists the selected camera mode in localStorage.
 
+## Viewport / map boundary contract
+
+The runtime must not expose empty space outside the visual background map during panning, wheel zoom, minimap navigation, reset, load, camera toggle, or browser resize.
+
+Implementation contract:
+
+- `minGridZoom()` must guarantee that the logical world footprint is never smaller than the viewport.
+- `mapPanRange()` clamps the logical world bounds to the viewport.
+- `backgroundPanRange()` clamps the translated background image so the player never sees empty shell/background outside the map artwork.
+- `panRange()` uses the intersection of logical world bounds and background coverage bounds.
+- `clampViewPan()` must be called after pan, zoom, minimap navigation, calibration load, reset, camera toggle, and resize.
+
 
 ## Road variant contract
 
