@@ -1,26 +1,27 @@
 ---
 name: city-builder-engine
-description: Preserve and reuse an existing static HTML/CSS/JS management, builder, placement, room-care, farming-town, or Kairo-like game runtime while customizing it into a new playable theme. Use this skill whenever the user asks to “改主题”, “重做一个 XX 题材游戏”, “换成 XX 风格”, “基于这个项目做新版”, “reskin”, or “theme customization” for an existing static game, even if they do not explicitly say to preserve code. Default to cloning and reusing the source runtime/data/UI/contracts; do not rebuild gameplay from scratch unless the user explicitly requests a new mechanic/engine. Update data/copy/settings as needed, regenerate provider-backed visual assets, run mandatory no-crop background removal/cutout/cropping/normalization, perform visual QA, and publish a clean demo.
+description: Build playable static HTML/CSS/JS city-builder, placement-management, farming-town, room/base builder, Kairo-like, or “建设玩法” prototypes by preserving the bundled reference runtime or an existing compatible runtime. Use this skill whenever the user asks to “做一个建设玩法”, “做个城建/建造经营游戏”, “做一个 XX 题材建设游戏”, “做一个可摆放建筑的经营玩法”, “Kairo-like builder”, “city builder”, “placement game”, or wants to create a themed playable builder demo. If an existing project is supplied, reuse its runtime/data/UI contracts and customize theme/assets instead of rebuilding from scratch. Generate provider-backed visual sheets/backgrounds, run no-crop background removal/cutout/cropping/normalization, perform visual QA, and publish a clean demo.
 ---
 
 # City Builder Engine
 
-Use this skill when a user wants to keep an existing playable static management / placement game runtime **functionally stable** while turning it into a new custom themed prototype. This may include data/copy/theme updates plus provider-generated visual assets. The usual asset path is sheet-aware: generate sheet images, preserve/cut out their backgrounds, crop them into final assets, visually QA them, then replace runtime files.
+Use this skill when a user wants to create a playable static **建设玩法 / city-builder / placement-management** prototype: a game where the player places buildings, roads, rooms, facilities, props, or town modules on a map and advances goals/economy over time. The default path is to reuse the bundled Kairo-like placement reference runtime or an existing compatible static runtime, then customize theme data and provider-generated visual assets.
 
-Also use this skill for vague or colloquial requests such as “改主题”, “换皮”, “重做一个 XX 题材”, “做成 XX 风格”, or “基于这个游戏做一个新版” whenever there is an existing static management/placement game to reuse. In those cases, interpret “重做” as **clone the existing project and reskin/theme-customize it**, not as permission to invent a new runtime, new architecture, or unrelated gameplay.
+Also use this skill for requests such as “做一个建设玩法”, “做个城建玩法”, “做一个 XX 题材建设游戏”, “做一个可摆放建筑的经营游戏”, “做一个开罗风经营建造原型”, “city builder”, “placement game”, “builder management game”, or “基于这个游戏做一个新版”. If an existing project is supplied, interpret the task as **reuse the runtime + customize theme/assets** unless the user explicitly asks for new mechanics or a different engine.
 
 Typical requests:
 
-- “把这个项目素材改成某个新风格，但保留玩法不变”
-- “基于这个项目重做一个 XX 题材版本”
-- “换成 XX 主题 / XX 风格，做一个可玩的新版”
-- “先生成白底 sheet，再按格切图替换”
-- “重新生成背景、建筑、角色，但最终文件名和路径不变”
-- “把整套素材迁移成另一种视觉主题，最后做 QA 和发布”
+- “做一个末日基地建设玩法”
+- “做个冰原科考站建设经营游戏”
+- “做一个古代市集营造玩法，可以摆建筑和铺路”
+- “基于这个 runtime 做一个 XX 题材 city builder”
+- “做一个开罗风 / Kairo-like 的建设原型”
+- “生成建筑 sheet、背景和角色，并裁切进玩法里”
+- “做一个可公开试玩的建设玩法 demo”
 
 ## Core principle
 
-**Reuse first. Reskin second. Rebuild never, unless explicitly requested.**
+**Builder gameplay first. Reuse the runtime. Customize theme/assets. Rebuild only when explicitly requested.**
 
 When a source project exists, the default job is to make a target copy and preserve its working code path. Treat the source project as a contract to discover and reuse:
 
@@ -30,7 +31,7 @@ When a source project exists, the default job is to make a target copy and prese
 - data schema, IDs, filenames, asset paths, dimensions, categories, and ordering;
 - validation/build/publish flow.
 
-A user saying “重做一个 XX 题材游戏” or “改成 XX 主题” does **not** authorize rewriting the game from scratch. Only rebuild or redesign gameplay when the user explicitly asks for new mechanics, a different engine, or a structural refactor. If the wording is ambiguous, proceed with clone-and-reskin and mention that assumption in the plan/report.
+A user saying “做一个 XX 题材建设玩法”, “重做一个 XX 题材游戏”, or “改成 XX 主题” does **not** authorize rewriting the runtime from scratch. Only rebuild or redesign gameplay when the user explicitly asks for new mechanics, a different engine, or a structural refactor. If the wording is ambiguous, proceed with reference-runtime reuse or clone-and-customize and mention that assumption in the plan/report.
 
 **Do not rewrite gameplay. Do not redesign the project. Do not replace the runtime.**
 
